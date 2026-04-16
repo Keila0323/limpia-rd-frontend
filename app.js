@@ -12,7 +12,7 @@ const mobileMenu = document.getElementById('mobileMenu');
 menuToggle?.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
   mobileMenu.setAttribute('aria-hidden', !isOpen);
-  menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 });
 
 // Close on link click
@@ -254,7 +254,7 @@ requestForm?.addEventListener('submit', async (e) => {
 function renderMatches(matches) {
   const grid = document.getElementById('matchesGrid');
   if (!matches.length) {
-    grid.innerHTML = '<p style="color:var(--color-text-muted);font-size:var(--text-sm)">No encontramos limpiadores disponibles para esa combinación. Intenta con otra ciudad o servicio.</p>';
+    grid.innerHTML = '<p style="color:var(--color-text-muted);font-size:var(--text-sm)">No cleaners found for that combination. Try a different city or service type.</p>';
     return;
   }
   grid.innerHTML = matches.map((m, i) => `
@@ -303,7 +303,7 @@ function getMockCleaners() {
     {
       id: 1,
       full_name: 'María Rodríguez',
-      bio: 'Especialista en limpieza hotelera con 8 años de experiencia en Punta Cana.',
+      bio: 'Hospitality cleaning specialist with 8 years of experience in Punta Cana.',
       services_offered: ['Airbnb Cleaning', 'Hotel Cleaning', 'Deep Cleaning'],
       cities_neighborhoods: ['Punta Cana', 'Bávaro'],
       hourly_rate: 18,
@@ -316,7 +316,7 @@ function getMockCleaners() {
     {
       id: 2,
       full_name: 'Carlos Méndez',
-      bio: 'Proveedor de servicios de lavandería y limpieza en Santo Domingo.',
+      bio: 'Laundry and deep cleaning provider based in Santo Domingo.',
       services_offered: ['Laundry', 'Deep Cleaning'],
       cities_neighborhoods: ['Santo Domingo', 'Gazcue'],
       hourly_rate: 15,
@@ -329,7 +329,7 @@ function getMockCleaners() {
     {
       id: 3,
       full_name: 'Ana Jiménez',
-      bio: 'Limpieza profesional de piscinas y exteriores en la Romana y Casa de Campo.',
+      bio: 'Professional pool and exterior cleaning in La Romana and Casa de Campo.',
       services_offered: ['Pool Cleaning', 'Hotel Cleaning'],
       cities_neighborhoods: ['La Romana', 'Casa de Campo'],
       hourly_rate: null,
