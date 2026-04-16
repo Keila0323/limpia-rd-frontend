@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limpia RD — Marketplace de Limpieza Hotelera</title>
+  <meta name="description" content="Conectamos propietarios y anfitriones de Airbnb en la República Dominicana con limpiadores y proveedores de servicios de confianza." />
+
+  <!-- Fonts: Cormorant (display/serif) + Switzer (body/sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Limpia RD inicio">
+        <!-- SVG Logo mark -->
+        <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M16 6 C16 6, 10 10, 10 16 C10 22, 13 24, 16 24 C19 24, 22 22, 22 16 C22 10, 16 6, 16 6Z" fill="currentColor" opacity="0.25"/>
+          <path d="M16 4 L16 8 M13 7 L15 10 M19 7 L17 10 M11 9 L14 11" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+          <path d="M10 22 Q16 20 22 22" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-wordmark">LIMPIA <em>RD</em></span>
+      </a>
+      <div class="nav-links">
+        <a href="#cleaners" class="nav-link">Servicios</a>
+        <a href="#how-it-works" class="nav-link">¿Cómo funciona?</a>
+        <a href="#request" class="nav-link nav-cta">Solicitar servicio</a>
+      </div>
+      <button class="nav-mobile-toggle" aria-label="Abrir menú" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+      <a href="#cleaners" class="nav-link">Servicios</a>
+      <a href="#how-it-works" class="nav-link">¿Cómo funciona?</a>
+      <a href="#request" class="nav-link">Solicitar servicio</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg-pattern" aria-hidden="true">
+      <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" fill="none">
+        <!-- Waves -->
+        <path d="M0 400 Q100 370, 200 400 Q300 430, 400 400 Q500 370, 600 400 Q700 430, 800 400 L800 600 L0 600Z" fill="currentColor" opacity="0.05"/>
+        <path d="M0 440 Q120 410, 240 440 Q360 470, 480 440 Q600 410, 720 440 L800 440 L800 600 L0 600Z" fill="currentColor" opacity="0.07"/>
+        <path d="M0 480 Q150 455, 300 480 Q450 505, 600 480 Q700 462, 800 480 L800 600 L0 600Z" fill="currentColor" opacity="0.09"/>
+        <!-- Palm silhouette -->
+        <line x1="640" y1="520" x2="640" y2="260" stroke="currentColor" stroke-width="8" opacity="0.12" stroke-linecap="round"/>
+        <path d="M640 280 Q620 240 570 230 Q600 260 640 280Z" fill="currentColor" opacity="0.1"/>
+        <path d="M640 270 Q660 225 720 215 Q690 250 640 270Z" fill="currentColor" opacity="0.1"/>
+        <path d="M640 290 Q590 265 565 210 Q605 245 640 290Z" fill="currentColor" opacity="0.08"/>
+        <path d="M640 285 Q695 260 730 205 Q695 248 640 285Z" fill="currentColor" opacity="0.08"/>
+        <path d="M640 300 Q670 300 700 280 Q680 310 640 300Z" fill="currentColor" opacity="0.07"/>
+        <ellipse cx="638" cy="320" rx="6" ry="8" fill="currentColor" opacity="0.12"/>
+        <ellipse cx="648" cy="325" rx="5" ry="7" fill="currentColor" opacity="0.1"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">República Dominicana</p>
+      <h1 class="hero-title">Limpieza hotelera,<br/><em>en quien confías</em></h1>
+      <p class="hero-subtitle">Conectamos propietarios y anfitriones de Airbnb con limpiadores verificados y proveedores de servicios en toda la República Dominicana.</p>
+      <div class="hero-actions">
+        <a href="#request" class="btn btn-primary">Solicitar servicio</a>
+        <a href="#cleaners" class="btn btn-ghost">Ver profesionales</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value" id="statCleaners">—</span>
+          <span class="stat-label">Limpiadores</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-value" id="statRequests">—</span>
+          <span class="stat-label">Servicios activos</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-value">5★</span>
+          <span class="stat-label">Calidad garantizada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="hiw" id="how-it-works" aria-labelledby="hiw-title">
+    <div class="container">
+      <div class="section-label">Proceso simple</div>
+      <h2 class="section-title" id="hiw-title">¿Cómo funciona?</h2>
+      <div class="hiw-grid">
+        <div class="hiw-step">
+          <div class="hiw-num" aria-hidden="true">01</div>
+          <h3 class="hiw-step-title">Describe tu servicio</h3>
+          <p class="hiw-step-body">Indica el tipo de limpieza, la ubicación y la fecha deseada. También puedes especificar el idioma preferido del proveedor.</p>
+        </div>
+        <div class="hiw-connector" aria-hidden="true"></div>
+        <div class="hiw-step">
+          <div class="hiw-num" aria-hidden="true">02</div>
+          <h3 class="hiw-step-title">Encuentra tu match</h3>
+          <p class="hiw-step-body">Nuestro sistema cruza tu solicitud con limpiadores verificados en tu área, filtrando por calificación y experiencia.</p>
+        </div>
+        <div class="hiw-connector" aria-hidden="true"></div>
+        <div class="hiw-step">
+          <div class="hiw-num" aria-hidden="true">03</div>
+          <h3 class="hiw-step-title">Confirma y paga</h3>
+          <p class="hiw-step-body">Selecciona tu proveedor preferido, confirma los detalles y realiza el pago de forma segura a través de la plataforma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLEANERS DIRECTORY -->
+  <section class="cleaners-section" id="cleaners" aria-labelledby="cleaners-title">
+    <div class="container">
+      <div class="section-label">Directorio</div>
+      <h2 class="section-title" id="cleaners-title">Profesionales disponibles</h2>
+
+      <!-- Filters -->
+      <div class="filters" role="group" aria-label="Filtros de búsqueda">
+        <div class="filter-group">
+          <label class="filter-label" for="filterCity">Ciudad</label>
+          <input class="filter-input" id="filterCity" type="text" placeholder="Punta Cana, Santo Domingo…" />
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="filterService">Servicio</label>
+          <select class="filter-input" id="filterService">
+            <option value="">Todos los servicios</option>
+            <option value="airbnb">Limpieza Airbnb</option>
+            <option value="hotel">Limpieza hotelera</option>
+            <option value="deep">Limpieza profunda</option>
+            <option value="laundry">Lavandería</option>
+            <option value="pool">Piscina</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="filterLang">Idioma</label>
+          <select class="filter-input" id="filterLang">
+            <option value="">Cualquier idioma</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="filterRating">Calificación mínima</label>
+          <select class="filter-input" id="filterRating">
+            <option value="">Cualquier calificación</option>
+            <option value="4">4★ o más</option>
+            <option value="4.5">4.5★ o más</option>
+          </select>
+        </div>
+        <button class="btn btn-primary btn-sm" id="applyFilters">Buscar</button>
+      </div>
+
+      <!-- Results -->
+      <div class="cleaners-grid" id="cleanersGrid" aria-live="polite" aria-label="Resultados de limpiadores">
+        <div class="skeleton-grid">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+
+      <div class="cleaners-empty hidden" id="cleanersEmpty" role="status">
+        <p>No se encontraron limpiadores con esos criterios.</p>
+        <button class="btn btn-ghost btn-sm" id="resetFilters">Limpiar filtros</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUEST FORM -->
+  <section class="request-section" id="request" aria-labelledby="request-title">
+    <div class="container container-narrow">
+      <div class="section-label">Solicitar</div>
+      <h2 class="section-title" id="request-title">Solicita tu servicio</h2>
+      <p class="section-subtitle">Completa el formulario y nuestro sistema encontrará los mejores profesionales disponibles en tu área.</p>
+
+      <form class="request-form" id="requestForm" novalidate aria-label="Formulario de solicitud de servicio">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="hostId">Tu ID de anfitrión</label>
+            <input class="form-input" id="hostId" type="number" min="1" placeholder="ej. 101" required />
+            <span class="form-hint">Identificador único de tu cuenta de anfitrión</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="serviceType">Tipo de servicio</label>
+            <select class="form-input" id="serviceType" required>
+              <option value="">Selecciona un servicio</option>
+              <option value="Airbnb Cleaning">Limpieza Airbnb</option>
+              <option value="Hotel Cleaning">Limpieza hotelera</option>
+              <option value="Deep Cleaning">Limpieza profunda</option>
+              <option value="Laundry">Lavandería</option>
+              <option value="Pool Cleaning">Limpieza de piscina</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="locationCity">Ciudad</label>
+            <input class="form-input" id="locationCity" type="text" placeholder="ej. Punta Cana" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="locationNeighborhood">Sector / Barrio</label>
+            <input class="form-input" id="locationNeighborhood" type="text" placeholder="ej. Bávaro" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="scheduledDate">Fecha y hora</label>
+            <input class="form-input" id="scheduledDate" type="datetime-local" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="preferredLang">Idioma preferido</label>
+            <select class="form-input" id="preferredLang">
+              <option value="">Sin preferencia</option>
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="notes">Notas adicionales <span class="form-optional">(opcional)</span></label>
+          <textarea class="form-input form-textarea" id="notes" rows="3" placeholder="Instrucciones especiales, acceso a la propiedad, preferencias…"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+            <span class="btn-text">Enviar solicitud</span>
+            <span class="btn-spinner hidden" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Success state -->
+      <div class="request-success hidden" id="requestSuccess" role="status" aria-live="polite">
+        <div class="success-icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M15 24 L21 30 L33 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="success-title">¡Solicitud enviada!</h3>
+        <p class="success-body">Tu solicitud fue recibida. A continuación encontrarás los mejores limpiadores disponibles para tu servicio.</p>
+
+        <div class="matches-section" id="matchesSection">
+          <h4 class="matches-title">Profesionales recomendados</h4>
+          <div class="matches-grid" id="matchesGrid"></div>
+        </div>
+
+        <button class="btn btn-ghost btn-sm" id="newRequest">Nueva solicitud</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- API BADGE -->
+  <section class="api-section" aria-label="API info">
+    <div class="container">
+      <div class="api-card">
+        <div class="api-info">
+          <div class="api-badge">API</div>
+          <div>
+            <h3 class="api-title">Accede a la API directamente</h3>
+            <p class="api-body">Limpia RD está construida sobre una API REST con FastAPI. Explora todos los endpoints en la documentación interactiva.</p>
+          </div>
+        </div>
+        <div class="api-links">
+          <a href="https://limpia-rd.onrender.com/docs" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+            Swagger UI
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 2h8v8M10 2L2 10"/></svg>
+          </a>
+          <a href="https://github.com/Keila0323/Limpia-RD" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+            GitHub
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 2h8v8M10 2L2 10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-wordmark">LIMPIA <em>RD</em></span>
+        <p class="footer-tagline">Hospitality Cleaning · República Dominicana</p>
+      </div>
+      <div class="footer-meta">
+        <p class="footer-copy">Construido con FastAPI, SQLAlchemy &amp; Stripe · <a href="https://github.com/Keila0323/Limpia-RD" target="_blank" rel="noopener noreferrer">Ver código fuente</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
